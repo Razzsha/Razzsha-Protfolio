@@ -1,0 +1,166 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* This makes the footer push down */
+}
+
+/* Skills Section */
+.skills-container {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skills-content p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Skill Categories */
+.skill-category {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #e3f2fd;
+    /* Light blue background */
+}
+
+.skill-category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category h3 {
+    font-size: 1.6rem;
+    color: #007BFF;
+    /* Blue color for headers */
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.skill:hover {
+    color: #f76b1c;
+    /* Orange color on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    /* Dark footer for contrast */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.footer-content a {
+    color: #f76b1c;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-content a:hover {
+    color: #f5a623;
+    text-decoration: underline;
+}
+
+/* Hover effect for footer links */
+.footer-content a:hover {
+    color: #f76b1c;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-img img {
+        max-width: 80%;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .bttn {
+        padding: 12px 30px;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+    }
+}

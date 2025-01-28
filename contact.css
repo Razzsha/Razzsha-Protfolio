@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #0c1022;
+    color: #fff;
+    font-size: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* Full Height Contact Section */
+.contact-container {
+    height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #ff8c00, #ff3d00);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    transform: perspective(1500px);
+    animation: containerAnimation 1s ease-in-out;
+}
+
+/* Hover Animation */
+.contact-container:hover {
+    transform: perspective(1500px) rotateY(10deg);
+}
+
+@keyframes containerAnimation {
+    0% {
+        transform: rotateX(60deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.contact-container h2 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    margin-bottom: 40px;
+}
+
+/* Input Fields */
+.input-group {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input-box {
+    position: relative;
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #fff, #e6e6e6);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1), -4px -4px 6px rgba(255, 255, 255, 0.1);
+    font-size: 1.1rem;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #ff8c00;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+    background: linear-gradient(145deg, #fff, #ffecb3);
+}
+
+/* Input Icons */
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: #888;
+}
+
+/* Send Button */
+.send-btn {
+    background: linear-gradient(145deg, #ff8c00, #ff3d00);
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15), -4px -4px 6px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 250px;
+    margin-top: 20px;
+}
+
+.send-btn:hover {
+    background: linear-gradient(145deg, #ff3d00, #ff8c00);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+footer a {
+    color: #ff8c00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ff3d00;
+    text-decoration: underline;
+}
+
+/* Hover effect for footer links */
+footer a:hover {
+    color: #ff8c00;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    .send-btn {
+        padding: 12px 30px;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
